@@ -7,7 +7,7 @@ const UpdateGoods = (props) => {
     product_id,
     name,
     price,
-    createNewProduct,
+    updateNewProduct,
     showModalUpdate,
     handleModalUpdate,
     handleChangeInput,
@@ -25,7 +25,7 @@ const UpdateGoods = (props) => {
             <Form.Group controlId="formBookName">
               <Form.Label>Id Product</Form.Label>
               <Form.Control
-                value={product_id}
+                defaultValue={product_id}
                 type="text"
                 name="product_id"
                 placeholder="Id product"
@@ -38,7 +38,7 @@ const UpdateGoods = (props) => {
             <Form.Group controlId="formBookName">
               <Form.Label>Name Product</Form.Label>
               <Form.Control
-                value={name}
+                defaultValue={name}
                 type="text"
                 name="name"
                 placeholder="Name product"
@@ -51,7 +51,7 @@ const UpdateGoods = (props) => {
             <Form.Group controlId="formBookName">
               <Form.Label>Price Product</Form.Label>
               <Form.Control
-                value={price}
+                defaultValue={price}
                 type="text"
                 name="price"
                 placeholder="Price product"
@@ -63,7 +63,7 @@ const UpdateGoods = (props) => {
         <Modal.Footer>
           <Button
             onClick={() => {
-              createNewProduct();
+              updateNewProduct();
               handleModalUpdate();
             }}
             style={{ backgroundColor: "#0ac1a5" }}

@@ -18,9 +18,9 @@ const DetailGoods = (props) => {
             <Form.Group controlId="formBookName">
               <Form.Label>Name Product</Form.Label>
               <Form.Control
-                // value={name}
+                defaultValue={detail.name}
                 type="text"
-                name={detail.name}
+                name="name"
                 placeholder="Name product"
               />
             </Form.Group>
@@ -30,9 +30,9 @@ const DetailGoods = (props) => {
             <Form.Group controlId="formBookName">
               <Form.Label>Price Product</Form.Label>
               <Form.Control
-                // value={price}
+                defaultValue={detail.price}
                 type="text"
-                name={detail.price}
+                name="price"
                 placeholder="Price product"
               />
             </Form.Group>

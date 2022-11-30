@@ -28,35 +28,39 @@ const ListGoods = (props) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((res) => (
-            <tr className="text-center">
-              <td style={{ width: "350px" }}>
-                <Button
-                  style={{ marginRight: "5px" }}
-                  onClick={() => {
-                    handleModalDetail();
-                    detailProduct();
-                  }}
-                >
-                  Detail
-                </Button>
-                <Button
-                  style={{ marginRight: "5px" }}
-                  onClick={() => handleModalUpate()}
-                >
-                  Edit
-                </Button>
-                <Button
-                  style={{ marginRight: "5px" }}
-                  onClick={() => deleteDataProduct(data.id)}
-                >
-                  Delete
-                </Button>
-              </td>
-              <td>{res.name}</td>
-              <td>{res.price}</td>
-            </tr>
-          ))}
+          {data !== null ? (
+            data.map((res) => (
+              <tr className="text-center">
+                <td style={{ width: "350px" }}>
+                  <Button
+                    style={{ marginRight: "5px" }}
+                    onClick={() => {
+                      handleModalDetail();
+                      detailProduct();
+                    }}
+                  >
+                    Detail
+                  </Button>
+                  <Button
+                    style={{ marginRight: "5px" }}
+                    onClick={() => handleModalUpate()}
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    style={{ marginRight: "5px" }}
+                    onClick={() => deleteDataProduct(data.id)}
+                  >
+                    Delete
+                  </Button>
+                </td>
+                <td>{res.name}</td>
+                <td>{res.price}</td>
+              </tr>
+            ))
+          ) : (
+            <h1 className="text-center">DATA ERROR</h1>
+          )}
         </tbody>
       </Table>
     </div>
